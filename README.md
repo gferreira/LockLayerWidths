@@ -17,14 +17,16 @@ The tool works by adding an observer for changes to glyph widths (in any layer) 
 Modes
 -----
 
-all unlocked
-: Default RoboFont 3 behavior (the tool is off). All glyph layer widths can be edited independently.
+<dl>
+<dt>all unlocked
+<dd>Default RoboFont 3 behavior (the tool is off). All glyph layer widths can be edited independently.
 
-all locked
-: Replicates RoboFont 1 behavior: all layers of a glyph have the same width. This is a global setting for all glyphs in all fonts.
+<dt>all locked
+<dd>Replicates RoboFont 1 behavior: all layers of a glyph have the same width. This is a global setting for all glyphs in all fonts.
 
-glyph locks
-: Allows both locked and unlocked glyphs in the same font. Glyphs can be locked/unlocked individually using the tool. The lock statuses are stored in the font lib.
+<dt>glyph locks
+<dd>Allows both locked and unlocked glyphs in the same font. Glyphs can be locked/unlocked individually using the tool. The lock statuses are stored in the font lib.
+</dl>
 
 Workflow
 --------
