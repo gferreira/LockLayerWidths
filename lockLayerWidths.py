@@ -237,14 +237,14 @@ class GlyphWidthObserver(BaseWindowController):
 
         glyph = notification["glyph"]
 
-        if not self.w.mode.get() == 2:
+        if self.w.mode.get() == 0:
             return
 
         lockStatus = self.getLockStatus(glyph)
         if not lockStatus: # is None:
             return
 
-        lockStatusIcon = '🔒' if lockStatus else '🔓' # 'L' if lockStatus else 'U'
+        lockStatusIcon = '🔒' if lockStatus else '🔓'
         ctx.save()
         ctx.fontSize(16)
         ctx.text(lockStatusIcon, (0, 0))
