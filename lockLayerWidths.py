@@ -226,7 +226,7 @@ class GlyphWidthObserver(BaseWindowController):
         lockStatusIcon = '🔒' if lockStatus else '🔓' # 'L' if lockStatus else 'U'
         ctx.save()
         ctx.scale(1, -1)
-        ctx.fontSize(72)
+        ctx.fontSize(120)
         ctx.text(lockStatusIcon, (glyph.width - 100, 30))
         ctx.restore()
 
@@ -288,17 +288,19 @@ class GlyphWidthObserver(BaseWindowController):
 
         # current glyph window
         if self.w.currentGlyph.get():
-            w = CurrentGlyphWindow()
-            g = w.getGlyph()
-            if g is not None and g not in glyphs:
-                glyphs += [RGlyph(g)]
+            glyphWindow = CurrentGlyphWindow()
+            if glyphWindow is not None:
+                g = glyphWindow.getGlyph()
+                if g is not None and g not in glyphs:
+                    glyphs += [RGlyph(g)]
 
         # space center selection
         if self.w.spaceCenter.get():
-            s = CurrentSpaceCenter(currentFontOnly=True)
-            g = s.glyphLineView.getSelected()
-            if g is not None and g not in glyphs:
-                glyphs += [RGlyph(g)]
+            spaceCenter = CurrentSpaceCenter(currentFontOnly=True)
+            if spaceCenter is not None:
+                g = spaceCenter.glyphLineView.getSelected()
+                if g is not None and g not in glyphs:
+                    glyphs += [RGlyph(g)]
 
         return glyphs
 

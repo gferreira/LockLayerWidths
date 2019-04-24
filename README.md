@@ -37,6 +37,12 @@ Workflow
 
 3. If the layer widths of a glyph are locked, a closed lock icon 🔒 will be shown when previwing a glyph in the Glyph Window, Font Overview and Space Center.
 
+    ![](imgs/glyph-window.png)
+
+    ![](imgs/font-overview.png)
+
+    ![](imgs/space-center.png)
+
 3. When the width of a glyph changes (in any layer), the new width is copied to all other layers of the glyph.
 
 To Do
